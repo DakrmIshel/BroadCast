@@ -18,10 +18,10 @@ client.on('message', message => { // هاذا للبرودكسات
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don`t have **MANAGE_MESSAGES** permission!");
 		
 		let bcSure = new Discord.RichEmbed()
-		.setTitle(`:mailbox_with_mail: **هل انت متأكد انك تريد ارسال رسالتك الى** ${message.guild.memberCount} **عضو**`)
+		.setTitle(`:mailbox_with_mail: **Are you Sure want Send This message to User** ${message.guild.memberCount} **User**`)
 		.setThumbnail(client.user.avatarURL)
 		.setColor('RANDOM')
-		.setDescription(`**\n:envelope: ➥ رسالتك**\n\n${args}`)
+		.setDescription(`**\n:envelope: ➥ Sending**\n\n${args}`)
 		.setTimestamp()
 		.setFooter(message.author.tag, message.author.avatarURL)
 		
@@ -47,12 +47,12 @@ client.on('message', message => { // هاذا للبرودكسات
             // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
         });
-				message.channel.send(`:timer: **يتم الان الارسال الى** \`\`${message.guild.memberCount}\`\` **عضو**`).then(msg => msg.delete(5000));
+				message.channel.send(`:timer: *We Sending u Message to Users*NTgwOTI5MzY2OTE4NDMwNzIw.XOX3VA.O2kardS8iZuVpWBp_xX-2QiA6Sk** \`\`${message.guild.memberCount}\`\` **User**`).then(msg => msg.delete(5000));
 				msg.delete();
 			})
 			dontSendBC.on('collect', r => {
 				msg.delete();
-				message.reply(':white_check_mark: **تم الغاء ارسال رسالتك بنجاح**').then(msg => msg.delete(5000));
+				message.reply(':white_check_mark: **DarkMishel>> Done We Cancel The Message**').then(msg => msg.delete(5000));
 			});
 		})
 	}
